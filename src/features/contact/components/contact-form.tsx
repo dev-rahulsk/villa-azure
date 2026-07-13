@@ -25,7 +25,7 @@ function Field({
   children: React.ReactNode;
 }) {
   return (
-    <div className="border-villa-primary/15 flex items-center gap-2.5 rounded-[2px] border px-3.5 py-1">
+    <div className="border-villa-primary/15 flex items-center gap-2.5 rounded-[2px] border px-3.5 py-3">
       <Icon className="size-4 shrink-0 text-[#9aa6b2]" strokeWidth={1.6} />
       {children}
     </div>
@@ -151,7 +151,7 @@ export function ContactForm() {
           <Textarea
             placeholder="Your Message"
             rows={4}
-            className="border-villa-primary/15 resize-none rounded-[2px]"
+            className="border-villa-primary/15 resize-none rounded-[2px] px-3.5 py-3"
             {...form.register("message")}
           />
           <FieldError message={form.formState.errors.message?.message} />

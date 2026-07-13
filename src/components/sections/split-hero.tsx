@@ -59,7 +59,7 @@ export function SplitHero({
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-[1280px] px-6 py-14 md:px-[30px] md:py-[70px]">
-        <div className="max-w-[470px]">
+        <div className="animate-in fade-in slide-in-from-bottom-6 max-w-[470px] duration-700 ease-out">
           {eyebrow && (
             <p className="text-villa-accent mb-3 text-[12px] font-semibold tracking-[3px] uppercase">
               {eyebrow}

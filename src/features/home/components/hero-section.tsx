@@ -35,7 +35,7 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-[rgba(9,26,48,0.7)] md:hidden" />
       <div className="absolute inset-0 hidden bg-gradient-to-r from-[rgba(9,26,48,0.86)] via-[rgba(9,26,48,0.5)] via-40% to-[rgba(9,26,48,0)] md:block" />
       <div className="relative mx-auto w-full max-w-[1280px] px-6 py-14 md:px-[30px] md:py-[70px]">
-        <div className="max-w-[560px] text-white">
+        <div className="animate-in fade-in slide-in-from-bottom-6 max-w-[560px] text-white duration-700 ease-out">
           <p className="font-script text-[32px] leading-none text-[#e6c789] md:text-[40px]">
             Welcome to
           </p>
