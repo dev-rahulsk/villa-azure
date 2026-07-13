@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from "@/components/ui/image";
+import { Link } from "react-router-dom";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { GLIMPSE_IMAGES, HERO_IMAGE } from "@/features/home/data/content";
 
@@ -24,7 +24,7 @@ export function GlimpseSection() {
         </div>
         <div className="mt-8 text-center">
           <Link
-            href="/gallery"
+            to="/gallery"
             className="bg-villa-primary inline-block rounded-[2px] px-8 py-[14px] text-[12px] font-medium tracking-[1.6px] text-white uppercase"
           >
             View Gallery

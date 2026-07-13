@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { Logo } from "@/components/layout/logo";
 import { FOOTER_LINK_GROUPS, SITE } from "@/lib/constants/site";
 
@@ -17,7 +17,7 @@ export function Footer() {
             </h4>
             <div className="flex flex-col gap-2.5 text-[13px] font-light text-white/70">
               {group.links.map((link) => (
-                <Link key={link.href} href={link.href}>
+                <Link key={link.href} to={link.href}>
                   {link.label}
                 </Link>
               ))}

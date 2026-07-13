@@ -1,5 +1,5 @@
-import Image from "next/image";
-// import Link from "next/link";
+import Image from "@/components/ui/image";
+// import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 // import { BOOK_YOUR_STAY_HREF } from "@/lib/constants/site";
 
@@ -81,7 +81,7 @@ export function CtaBand({
         </div>
         <div className="text-left md:text-center">
           {/* <Link
-            href={BOOK_YOUR_STAY_HREF}
+            to={BOOK_YOUR_STAY_HREF}
             className="bg-villa-accent inline-block rounded-[2px] px-8 py-[14px] text-[12px] font-medium tracking-[1.6px] text-white uppercase"
           >
             Book Your Stay

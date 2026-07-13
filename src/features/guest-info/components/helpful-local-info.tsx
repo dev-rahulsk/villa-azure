@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/ui/image";
 import { Compass, CarFront, ShoppingBag, UtensilsCrossed, Waves, type LucideIcon } from "lucide-react";
 import { LOCAL_INFO_IMAGE, LOCAL_INFO_ITEMS } from "@/features/guest-info/data/content";
 

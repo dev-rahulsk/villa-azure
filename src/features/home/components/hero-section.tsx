@@ -1,18 +1,37 @@
-import Image from "next/image";
-import { HERO_IMAGE } from "@/features/home/data/content";
+"use client";
+
+import { useEffect, useState } from "react";
+import Image from "@/components/ui/image";
+import { HERO_IMAGES } from "@/features/home/data/content";
+
+const SLIDE_DURATION_MS = 6000;
 
 export function HeroSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    if (HERO_IMAGES.length <= 1) return;
+    const id = setInterval(() => {
+      setActiveIndex((current) => (current + 1) % HERO_IMAGES.length);
+    }, SLIDE_DURATION_MS);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <header className="bg-villa-primary relative flex min-h-[560px] items-center overflow-hidden">
-      <Image
-        src={HERO_IMAGE}
-        alt="Villa Azure"
-        fill
-        loading="eager"
-        fetchPriority="high"
-        sizes="100vw"
-        className="object-cover opacity-90"
-      />
+      {HERO_IMAGES.map((src, index) => (
+        <Image
+          key={src}
+          src={src}
+          alt="Villa Azure"
+          fill
+          loading={index === 0 ? "eager" : "lazy"}
+          fetchPriority={index === 0 ? "high" : undefined}
+          sizes="100vw"
+          className="object-cover opacity-90 transition-opacity duration-1000 ease-in-out"
+          style={{ opacity: index === activeIndex ? 0.9 : 0 }}
+        />
+      ))}
       <div className="absolute inset-0 bg-[rgba(9,26,48,0.7)] md:hidden" />
       <div className="absolute inset-0 hidden bg-gradient-to-r from-[rgba(9,26,48,0.86)] via-[rgba(9,26,48,0.5)] via-40% to-[rgba(9,26,48,0)] md:block" />
       <div className="relative mx-auto w-full max-w-[1280px] px-6 py-14 md:px-[30px] md:py-[70px]">

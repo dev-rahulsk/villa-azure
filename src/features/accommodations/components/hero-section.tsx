@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/ui/image";
 import { BedDouble, Snowflake, Users, Wifi, type LucideIcon } from "lucide-react";
 import { HERO_IMAGE, HERO_STATS } from "@/features/accommodations/data/bedrooms";
 import { heroImageMaskStyle } from "@/lib/constants/hero-mask";

@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from "@/components/ui/image";
+import { Link } from "react-router-dom";
 import { ABOUT_IMAGE } from "@/features/home/data/content";
 
 export function AboutSection() {
@@ -29,7 +29,7 @@ export function AboutSection() {
           seeking a memorable Jamaican escape.
         </p>
         <Link
-          href="/the-villa"
+          to="/the-villa"
           className="bg-villa-primary inline-block rounded-[2px] px-7 py-[14px] text-[12px] font-medium tracking-[1.6px] text-white uppercase"
         >
           Learn More

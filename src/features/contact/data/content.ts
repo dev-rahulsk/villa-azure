@@ -13,13 +13,13 @@ export const CONTACT_DETAILS = [
   {
     icon: "Mail" as const,
     label: "Email",
-    value: "info@villaazure.com",
+    value: "villaazureja@gmail.com",
     detail: "We'll get back to you within 24 hours.",
   },
   {
     icon: "MapPin" as const,
     label: "Address",
-    value: "Drax Hall, St. Ann, Jamaica",
+    value: "Paradisiac Beach Club\nRichmond, St Ann, Jamaica",
     detail: "North Coast of Jamaica",
   },
   {

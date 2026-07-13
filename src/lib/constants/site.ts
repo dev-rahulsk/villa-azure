@@ -6,7 +6,7 @@ export const SITE = {
   logoScript: "Azure",
   tagline: "Luxury by the Sea",
   phone: "+1 (876) 123-4567",
-  email: "info@villaazure.com",
+  email: "villaazureja@gmail.com",
   address: "Drax Hall, St. Ann, Jamaica",
 } as const;
 

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/ui/image";
 import { Check } from "lucide-react";
 import { ABOUT_IMAGE, HOME_CHECKLIST } from "@/features/the-villa/data/content";
 

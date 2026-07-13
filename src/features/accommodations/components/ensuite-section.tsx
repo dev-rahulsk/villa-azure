@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from "@/components/ui/image";
+import { Link } from "react-router-dom";
 import { ENSUITE_IMAGES } from "@/features/accommodations/data/bedrooms";
 
 export function EnsuiteSection() {
@@ -17,7 +17,7 @@ export function EnsuiteSection() {
             comfort and convenience.
           </p>
           <Link
-            href="/amenities"
+            to="/amenities"
             className="border-villa-accent text-villa-primary inline-block rounded-[2px] border px-[26px] py-[13px] text-[12px] font-semibold tracking-[1.5px] uppercase"
           >
             View Amenities

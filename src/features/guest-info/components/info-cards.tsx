@@ -1,4 +1,5 @@
-import { CalendarClock, Check, Phone, Wifi } from "lucide-react";
+import { CalendarClock, Check, Map, MapPin, Phone } from "lucide-react";
+import { GETTING_HERE } from "@/features/guest-info/data/content";
 
 function IconBadge({ children }: { children: React.ReactNode }) {
   return (
@@ -65,16 +66,42 @@ export function InfoCards() {
 
         <div className="rounded-[2px] bg-white p-8 text-center shadow-[0_16px_36px_-28px_rgba(14,44,80,0.5)]">
           <IconBadge>
-            <Wifi className="size-[26px] text-white" strokeWidth={1.5} />
+            <MapPin className="size-[26px] text-white" strokeWidth={1.5} />
           </IconBadge>
-          <CardTitle>Wi-Fi Information</CardTitle>
-          <div className="text-villa-accent mb-3.5 text-[15px] font-medium">
-            Provided at Check-In
-          </div>
-          <p className="text-[12px] leading-[1.7] font-light text-[#6a7784]">
-            Network name and password will be shared with you upon arrival.
-            Enjoy seamless connectivity throughout the villa.
+          <CardTitle>Getting Here</CardTitle>
+          <p className="text-villa-accent -mt-2.5 mb-4.5 text-[13px] font-medium">
+            Find Villa Azure with ease.
           </p>
+          <div className="text-villa-primary mb-1.5 text-[11px] font-semibold tracking-[1px] uppercase">
+            Address
+          </div>
+          <p className="mb-4.5 text-[12.5px] leading-[1.6] font-light text-[#33404c]">
+            {GETTING_HERE.address.map((line) => (
+              <span key={line} className="block">
+                {line}
+              </span>
+            ))}
+          </p>
+          <a
+            href={GETTING_HERE.mapUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border-villa-primary text-villa-primary mb-5 inline-flex w-full items-center justify-center gap-2 rounded-[2px] border px-4 py-2.5 text-[11px] font-semibold tracking-[1.2px] uppercase"
+          >
+            <Map className="size-4" strokeWidth={1.5} />
+            Interactive Map
+          </a>
+          <div className="text-villa-primary mb-2.5 text-left text-[11px] font-semibold tracking-[1px] uppercase">
+            Nearby Airports
+          </div>
+          <div className="flex flex-col gap-2.5 text-left text-[12px] leading-[1.6] font-light text-[#6a7784]">
+            {GETTING_HERE.airports.map((airport) => (
+              <div key={airport.name}>
+                <span className="font-semibold text-[#33404c]">{airport.name}: </span>
+                {airport.detail}
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="rounded-[2px] bg-white p-8 shadow-[0_16px_36px_-28px_rgba(14,44,80,0.5)]">

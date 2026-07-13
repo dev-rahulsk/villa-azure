@@ -71,7 +71,7 @@ export const GALLERY_SECTIONS: GallerySection[] = [
       { src: villaImage("RDP08073.jpg"), caption: "Beaches" },
       { src: villaImage("RDP08072.jpg"), caption: "Resort Pool" },
       { src: villaImage("RDP08059.jpg"), caption: "Playground" },
-      { src: villaImage("RDP08061.jpg"), caption: "Villa Entrance" },
+      { src: villaImage("RDP08061.jpg"), caption: "Clubhouse" },
     ],
   },
 ];

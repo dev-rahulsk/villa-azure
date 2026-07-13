@@ -1,9 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from "@/components/ui/image";
+import { Link } from "react-router-dom";
 import { NAV_LINKS } from "@/lib/constants/site";
 import { villaImage } from "@/lib/constants/images";
 
-export default function NotFound() {
+export default function NotFoundPage() {
   const exploreLinks = NAV_LINKS.filter((link) => link.href !== "/");
 
   return (
@@ -35,7 +35,7 @@ export default function NotFound() {
         </p>
 
         <Link
-          href="/"
+          to="/"
           className="bg-villa-accent mt-8 inline-block rounded-[2px] px-9 py-[14px] text-[12px] font-medium tracking-[1.6px] text-white uppercase"
         >
           Back to Home
@@ -49,7 +49,7 @@ export default function NotFound() {
             {exploreLinks.map((link) => (
               <Link
                 key={link.href}
-                href={link.href}
+                to={link.href}
                 className="text-[13px] font-light text-white/85 underline underline-offset-4 hover:text-white"
               >
                 {link.label}

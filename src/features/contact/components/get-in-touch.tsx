@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/ui/image";
 import { Clock, Mail, MapPin, Phone, type LucideIcon } from "lucide-react";
 import {
   CONTACT_DETAILS,
@@ -38,7 +38,7 @@ export function GetInTouch() {
                 <div className="text-villa-primary text-[11px] font-semibold tracking-[0.8px] uppercase">
                   {item.label}
                 </div>
-                <div className="text-villa-accent text-[14px] font-medium break-words">
+                <div className="text-villa-accent text-[14px] font-medium break-words whitespace-pre-line">
                   {item.value}
                 </div>
                 <div className="text-[11.5px] font-light text-[#6a7784]">

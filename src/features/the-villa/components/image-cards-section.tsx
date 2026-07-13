@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/ui/image";
 import { IMAGE_CARDS } from "@/features/the-villa/data/content";
 
 export function ImageCardsSection() {

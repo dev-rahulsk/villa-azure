@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { ShoppingBag, UtensilsCrossed, type LucideIcon } from "lucide-react";
 import { LOCAL_COLUMNS } from "@/features/home/data/content";
 
@@ -24,7 +24,7 @@ export function LocalColumns() {
                   {column.detail}
                 </p>
                 <Link
-                  href={column.href}
+                  to={column.href}
                   className="text-villa-accent text-[12px] font-semibold tracking-[1.4px] uppercase"
                 >
                   {column.linkLabel}

@@ -36,6 +36,25 @@ export const DURING_STAY = [
   },
 ];
 
+export const GETTING_HERE = {
+  address: ["Paradisiac Beach Club", "Richmond", "St. Ann, Jamaica"],
+  mapUrl: "https://www.google.com/maps?cid=10893279191693715489",
+  airports: [
+    {
+      name: "Sangster International Airport (MBJ)",
+      detail: "Approx. 90–100 minutes drive",
+    },
+    {
+      name: "Norman Manley International Airport (NMIA)",
+      detail: "Approx. 2 hours and 15 minutes drive",
+    },
+    {
+      name: "Ian Fleming International Airport (OCJ)",
+      detail: "Approx. 45–60 minutes drive",
+    },
+  ],
+};
+
 export const LOCAL_INFO_ITEMS = [
   {
     icon: "UtensilsCrossed" as const,

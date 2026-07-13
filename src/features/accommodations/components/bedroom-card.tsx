@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/ui/image";
 import { BedDouble, Check } from "lucide-react";
 import type { Bedroom } from "@/features/accommodations/data/bedrooms";
 

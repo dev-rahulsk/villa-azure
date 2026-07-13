@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { SITE } from "@/lib/constants/site";
 
@@ -11,7 +11,7 @@ export function Logo({ variant = "dark", className }: LogoProps) {
   const isLight = variant === "light";
 
   return (
-    <Link href="/" className={cn("flex flex-col leading-none", className)}>
+    <Link to="/" className={cn("flex flex-col leading-none", className)}>
       <span
         className={cn(
           "font-heading text-[18px] font-semibold tracking-[4px]",

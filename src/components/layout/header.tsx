@@ -2,15 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { NAV_LINKS } from "@/lib/constants/site";
 import { Logo } from "@/components/layout/logo";
 
 export function Header() {
-  const pathname = usePathname();
+  const { pathname } = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
@@ -35,7 +34,7 @@ export function Header() {
             return (
               <Link
                 key={link.href}
-                href={link.href}
+                to={link.href}
                 className={cn(
                   "text-villa-primary text-[11.5px] tracking-[1.3px] uppercase",
                   isActive
@@ -74,7 +73,7 @@ export function Header() {
             return (
               <Link
                 key={link.href}
-                href={link.href}
+                to={link.href}
                 onClick={() => setMobileOpen(false)}
                 className={cn(
                   "text-villa-primary text-[16px] tracking-[2px] uppercase",

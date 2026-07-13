@@ -1,6 +1,12 @@
 import { villaImage } from "@/lib/constants/images";
 
-export const HERO_IMAGE = villaImage("RDP08046.jpg");
+export const HERO_IMAGES = [
+  villaImage("RDP08046.jpg"),
+  villaImage("RDP07948.jpg"),
+  villaImage("RDP07963.jpg"),
+  villaImage("RDP08045.jpg"),
+];
+export const HERO_IMAGE = HERO_IMAGES[0];
 export const ABOUT_IMAGE = villaImage("RDP08018.jpg");
 
 export const HIGHLIGHTS = [
