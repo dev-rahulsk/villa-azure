@@ -16,6 +16,7 @@ export const NAV_LINKS = [
   { href: "/accommodations", label: "Accommodations" },
   { href: "/amenities", label: "Amenities" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/explore-st-ann", label: "Explore St Ann" },
   { href: "/guest-info", label: "Guest Info" },
   { href: "/contact", label: "Contact" },
 ] as const;
@@ -35,6 +36,7 @@ export const FOOTER_LINK_GROUPS = [
   {
     title: "Explore",
     links: [
+      { href: "/explore-st-ann", label: "Explore St Ann" },
       { href: "/guest-info", label: "Guest Info" },
       { href: "/contact", label: "Contact" },
     ],

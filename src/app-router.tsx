@@ -9,6 +9,7 @@ import TheVillaPage from "@/pages/TheVillaPage";
 import AccommodationsPage from "@/pages/AccommodationsPage";
 import AmenitiesPage from "@/pages/AmenitiesPage";
 import GalleryPage from "@/pages/GalleryPage";
+import ExploreStAnnPage from "@/pages/ExploreStAnnPage";
 import GuestInfoPage from "@/pages/GuestInfoPage";
 import ContactPage from "@/pages/ContactPage";
 import NotFoundPage from "@/pages/NotFoundPage";
@@ -38,6 +39,7 @@ export function App() {
               <Route path="/accommodations" element={<AccommodationsPage />} />
               <Route path="/amenities" element={<AmenitiesPage />} />
               <Route path="/gallery" element={<GalleryPage />} />
+              <Route path="/explore-st-ann" element={<ExploreStAnnPage />} />
               <Route path="/guest-info" element={<GuestInfoPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="*" element={<NotFoundPage />} />
