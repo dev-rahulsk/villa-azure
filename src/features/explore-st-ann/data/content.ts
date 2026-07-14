@@ -2,9 +2,9 @@ function exploreImage(filename: string) {
   return `/images/explore-st-ann/${filename}`;
 }
 
-export const HERO_IMAGE = exploreImage("hero.jpeg");
-export const DINING_IMAGE = exploreImage("dining.png");
-export const ATTRACTIONS_IMAGE = exploreImage("attractions.png");
+export const HERO_IMAGE = exploreImage("hero.jpg");
+export const DINING_IMAGE = exploreImage("dining.jpg");
+export const ATTRACTIONS_IMAGE = exploreImage("attractions.jpg");
 
 export const HERO_DESCRIPTION =
   "From breathtaking beaches and natural wonders to local flavors and rich culture, St. Ann has something for everyone. Let us be your guide to unforgettable experiences just minutes from Villa Azure.";

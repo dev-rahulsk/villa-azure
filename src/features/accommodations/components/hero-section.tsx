@@ -41,7 +41,7 @@ export function HeroSection() {
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-[1280px] px-6 py-16 md:px-[30px] md:py-[74px]">
-        <div className="max-w-[640px]">
+        <div className="animate-in fade-in slide-in-from-bottom-6 max-w-[640px] duration-700 ease-out">
           <h1 className="font-heading text-[clamp(1.65rem,6vw,3.5rem)] leading-none font-semibold text-white md:text-villa-primary">
             ACCOMMODATIONS
           </h1>
