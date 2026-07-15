@@ -4,7 +4,7 @@ export async function submitContactForm(values: ContactFormValues) {
   // Plain fetch with a string body (no explicit Content-Type) so the browser
   // sends this as a CORS "simple request" and skips the OPTIONS preflight —
   // the Apps Script Web App below doesn't handle preflight requests.
-  const response = await fetch(import.meta.env.VITE_CONTACT_FORM_URL, {
+  const response = await fetch("https://script.google.com/macros/s/AKfycbytAgL0x9snX669wN_wIHg3eMI_UjOGQv-kTYVb2KgxGVtbKAWelXUfCbNhXjo0siUt/exec", {
     method: "POST",
     body: JSON.stringify(values),
   });
