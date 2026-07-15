@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import Image from "@/components/ui/image";
 import { HERO_IMAGES } from "@/features/home/data/content";

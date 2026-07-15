@@ -1,5 +1,3 @@
-"use client";
-
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
@@ -38,7 +36,7 @@ function FieldError({ message }: { message?: string }) {
 }
 
 const bareInputClass =
-  "h-auto border-0 bg-transparent p-0 shadow-none focus-visible:ring-0";
+  "h-auto border-0 bg-transparent px-0 py-1 shadow-none focus-visible:ring-0";
 
 export function ContactForm() {
   const form = useForm<ContactFormValues>({

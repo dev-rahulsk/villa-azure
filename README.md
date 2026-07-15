@@ -11,4 +11,4 @@ npm run build
 npm run lint
 ```
 
-The contact API base URL uses `VITE_API_BASE_URL` in this Vite version.
+The contact form submits to a Google Apps Script Web App URL set via `VITE_CONTACT_FORM_URL`.

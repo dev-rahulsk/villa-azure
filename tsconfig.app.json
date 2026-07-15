@@ -19,10 +19,7 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "next/link": ["./src/adapters/next-link.tsx"],
-      "next/image": ["./src/adapters/next-image.tsx"],
-      "next/navigation": ["./src/adapters/next-navigation.ts"]
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src"]
