@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
@@ -61,6 +62,12 @@ export function ContactForm() {
       onSuccess: () => form.reset(),
     });
   });
+
+  useEffect(() => {
+    if (!mutation.isSuccess) return;
+    const timer = setTimeout(() => mutation.reset(), 6000);
+    return () => clearTimeout(timer);
+  }, [mutation.isSuccess, mutation.reset]);
 
   return (
     <div className="rounded-[2px] bg-white p-8 shadow-[0_18px_40px_-30px_rgba(14,44,80,0.5)] md:p-10">
