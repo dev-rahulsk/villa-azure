@@ -52,7 +52,7 @@ export const LOCAL_COLUMNS = [
     detail:
       "From beachside bites to local favorites, there's something for every taste.",
     linkLabel: "View Our Guide →",
-    href: "/guest-info",
+    href: "/explore-st-ann",
   },
   {
     icon: "ShoppingBag" as const,

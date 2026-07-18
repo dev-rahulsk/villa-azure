@@ -7,7 +7,7 @@ export const CONTACT_DETAILS = [
   {
     icon: "Phone" as const,
     label: "Phone",
-    value: "+1 (876) 123-4567",
+    value: "+1(658)218-2181",
     detail: "Available 8:00 AM – 8:00 PM EST",
   },
   {

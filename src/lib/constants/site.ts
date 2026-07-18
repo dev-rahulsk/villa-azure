@@ -5,9 +5,9 @@ export const SITE = {
   logoPrimary: "VILLA",
   logoScript: "Azure",
   tagline: "Luxury by the Sea",
-  phone: "+1 (876) 123-4567",
+  phone: "+1(658)218-2181",
   email: "villaazureja@gmail.com",
-  address: "Drax Hall, St. Ann, Jamaica",
+  address: "Richmond, St Ann, Jamaica",
 } as const;
 
 export const NAV_LINKS = [
