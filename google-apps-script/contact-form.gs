@@ -52,6 +52,11 @@ function doPost(e) {
  * (Gmail, Outlook) don't load Google Fonts like Cormorant Garamond.
  * ---------------------------------------------------------------------- */
 
+function capitalize_(str) {
+  str = String(str || "");
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 function escapeHtml_(str) {
   return String(str || "").replace(/[&<>"']/g, function (c) {
     return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
@@ -86,6 +91,7 @@ function emailShell_(preheader, bodyHtml) {
       // Footer
       '<tr><td style="background-color:#0e2c50;padding:24px 24px;text-align:center;">' +
         '<div style="font-family:Helvetica,Arial,sans-serif;font-size:12px;color:#c9d3de;line-height:1.6;">' +
+          '<span style="color:#ffffff;font-weight:bold;">Villa Azure</span><br>' +
           'Paradisiac Beach Club, Richmond, St. Ann, Jamaica<br>' +
           '<a href="mailto:villaazureja@gmail.com" style="color:#bf9a5a;text-decoration:none;">villaazureja@gmail.com</a>' +
         '</div>' +
@@ -115,7 +121,7 @@ function ownerHtml_(data) {
       detailRow_('Name', escapeHtml_(data.firstName) + ' ' + escapeHtml_(data.lastName)) +
       detailRow_('Email', '<a href="mailto:' + escapeHtml_(data.email) + '" style="color:#0e2c50;">' + escapeHtml_(data.email) + '</a>') +
       detailRow_('Phone', escapeHtml_(data.phone || 'N/A')) +
-      detailRow_('Subject', escapeHtml_(data.subject)) +
+      detailRow_('Subject', escapeHtml_(capitalize_(data.subject))) +
     '</table>' +
     '<div style="font-family:Helvetica,Arial,sans-serif;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:#bf9a5a;margin:24px 0 8px;">Message</div>' +
     '<div style="font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:1.7;color:#0e2c50;background-color:#eef4fa;padding:18px 20px;">' +
@@ -135,7 +141,7 @@ function customerHtml_(data) {
       '<p style="margin:0 0 8px;">Here\'s a copy of what you sent us:</p>' +
     '</div>' +
     '<div style="font-family:Helvetica,Arial,sans-serif;font-size:14px;line-height:1.7;color:#0e2c50;background-color:#eef4fa;padding:18px 20px;margin:8px 0 24px;">' +
-      '<strong>Subject:</strong> ' + escapeHtml_(data.subject) + '<br><br>' +
+      '<strong>Subject:</strong> ' + escapeHtml_(capitalize_(data.subject)) + '<br><br>' +
       nl2br_(data.message) +
     '</div>' +
     '<div style="font-family:Helvetica,Arial,sans-serif;font-size:15px;line-height:1.7;color:#3a4550;">' +
@@ -150,7 +156,7 @@ function ownerPlainText_(data) {
     "Name: " + data.firstName + " " + data.lastName + "\n" +
     "Email: " + data.email + "\n" +
     "Phone: " + (data.phone || "N/A") + "\n" +
-    "Subject: " + data.subject + "\n\n" +
+    "Subject: " + capitalize_(data.subject) + "\n\n" +
     "Message:\n" + data.message
   );
 }
@@ -160,11 +166,12 @@ function customerPlainText_(data) {
     "Hi " + data.firstName + ",\n\n" +
     "Thank you for reaching out to Villa Azure! We've received your message and our team will get back to you within 24 hours.\n\n" +
     "Here's a copy of what you sent us:\n\n" +
-    "Subject: " + data.subject + "\n" +
+    "Subject: " + capitalize_(data.subject) + "\n" +
     "Message: " + data.message + "\n\n" +
     "We can't wait to help you plan your stay on Jamaica's beautiful North Coast.\n\n" +
     "Warm regards,\n" +
-    "The Villa Azure Team\n" +
+    "The Villa Azure Team\n\n" +
+    "Villa Azure\n" +
     "Paradisiac Beach Club, Richmond, St. Ann, Jamaica"
   );
 }
