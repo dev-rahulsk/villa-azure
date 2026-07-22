@@ -124,9 +124,20 @@ export function InfoCards() {
             </div>
             <div>
               <div className="text-villa-primary text-[11px] font-semibold tracking-[0.5px] uppercase">
+                Hospital
+              </div>
+              <div className="text-villa-accent mb-1 font-medium">
+                St. Ann&apos;s Bay Regional Hospital
+              </div>
+              <div className="text-villa-accent font-medium">+1 (876) 972 0150</div>
+              <div className="text-villa-accent font-medium">+1 (876) 972 0151</div>
+              <div className="text-villa-accent font-medium">+1 (876) 972 0152</div>
+            </div>
+            <div>
+              <div className="text-villa-primary text-[11px] font-semibold tracking-[0.5px] uppercase">
                 Property Manager
               </div>
-              <div className="text-villa-accent font-medium">(876) 321-6543</div>
+              <div className="text-villa-accent font-medium">+1 (658) 218 2181</div>
             </div>
           </div>
         </div>
